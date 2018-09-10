@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  identityservices:
+    image: ${DOCKER_REGISTRY}identityservices
+    build:
+      context: .
+      dockerfile: IdentityServices/Dockerfile
+
+  webapik:
+    image: ${DOCKER_REGISTRY}webapik
+    build:
+      context: .
+      dockerfile: WebApiK/Dockerfile
+
